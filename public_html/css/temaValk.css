@@ -1,576 +1,316 @@
-
 /* =====================================================
-   VALKYRIA THEME.CSS
-   Bootstrap 5 Theme
-   Dark + Premium + Feminine Gym Style
+   VALKYRIA CORE ENGINE - BOOTSTRAP 5 HIJACK LAYER
+   This completely overrides the native bootstrap.min.css
 ===================================================== */
 
-/* ===========================
-   GOOGLE FONT
-=========================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700&family=Montserrat:wght=600;700;800&display=swap');
 
-
-/* ===========================
-   ROOT VARIABLES
-=========================== */
-:root{
-
-    /* BRAND COLORS */
-    --vk-primary: #ff0f7b;
-    --vk-primary-hover: #e6006d;
-    --vk-secondary: #ff4fa3;
-
-    /* RGB VERSION (for rgba usage) */
-    --vk-primary-rgb: 255, 15, 123;
-
-    /* BACKGROUNDS */
-    --vk-bg: #0d0d0d;
-    --vk-surface: #161616;
-    --vk-surface-light: #1d1d1d;
-    --vk-border: #2b2b2b;
-
-    /* TEXT */
-    --vk-text: #ffffff;
-    --vk-text-muted: #a1a1aa;
-    --vk-text-soft: #d4d4d8;
-
-    /* STATUS COLORS */
-    --vk-success: #22c55e;
-    --vk-danger: #ef4444;
-    --vk-warning: #f59e0b;
-
-    /* BORDER RADIUS */
-    --vk-radius-sm: 12px;
-    --vk-radius: 18px;
-    --vk-radius-lg: 24px;
-
-    /* SHADOWS */
-    --vk-shadow:
-        0 10px 30px rgba(0, 0, 0, .35);
-
-    --vk-shadow-pink:
-        0 0 20px rgba(var(--vk-primary-rgb), .18);
-
-    /* EFFECTS */
-    --vk-primary-soft:
-        rgba(var(--vk-primary-rgb), .15);
-
-    --transition:
-        all .25s ease;
+:root {
+    /* --- Overwriting Bootstrap's Color Palette --- */
+    --bs-primary: #ff0f7b;
+    --bs-primary-rgb: 255, 15, 123;
+    --bs-secondary: #ff4fa3;
+    --bs-secondary-rgb: 255, 79, 163;
+    --bs-success: #22c55e;
+    --bs-danger: #ef4444;
+    --bs-warning: #f59e0b;
+    --bs-dark: #090909;
+    --bs-light: #1d1d1d;
+    
+    /* --- Overwriting Backgrounds & Canvas --- */
+    --bs-body-bg: #0d0d0d;
+    --bs-body-color: #ffffff;
+    --bs-body-color-rgb: 255, 255, 255;
+    --bs-link-color: #ff0f7b;
+    --bs-link-hover-color: #ff4fa3;
+    --bs-border-color: #2b2b2b;
+    
+    /* --- Overwriting Global Fonts --- */
+    --bs-font-sans-serif: 'Inter', system-ui, -apple-system, sans-serif;
+    --bs-heading-font-family: 'Montserrat', sans-serif;
+    
+    /* --- Overwriting Sizing & Radii --- */
+    --bs-border-radius: 18px;
+    --bs-border-radius-sm: 12px;
+    --bs-border-radius-lg: 24px;
 }
 
-
-/* ===========================
-   GLOBAL
-=========================== */
-html{
-    scroll-behavior: smooth;
-}
-
-body{
-    background: var(--vk-bg);
-    color: var(--vk-text);
-    font-family: 'Inter', sans-serif;
+/* =====================================================
+   FORCE GLOBALS (Ensures absolute dark-mode dominance)
+===================================================== */
+body {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--bs-body-color) !important;
+    font-family: var(--bs-font-sans-serif);
     overflow-x: hidden;
 }
 
-h1,h2,h3,h4,h5,h6{
-    font-family: 'Montserrat', sans-serif;
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--bs-heading-font-family);
     font-weight: 700;
-    color: white;
+    color: #ffffff !important;
 }
 
-a{
+a {
     text-decoration: none;
-    transition: var(--transition);
+    transition: all 0.25s ease;
 }
 
-img{
-    max-width: 100%;
-}
-
-
-/* ===========================
-   SCROLLBAR
-=========================== */
-::-webkit-scrollbar{
-    width: 10px;
-}
-
-::-webkit-scrollbar-track{
-    background: #111;
-}
-
-::-webkit-scrollbar-thumb{
-    background: #333;
-    border-radius: 100px;
-}
-
-::-webkit-scrollbar-thumb:hover{
-    background: var(--vk-primary);
-}
-
-
-/* ===========================
-   NAVBAR
-=========================== */
-.navbar{
-    background: rgba(12, 12, 12, .88);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255,255,255,.06);
+/* =====================================================
+   NAVBAR FIX (Nuclear Option for Glassmorphism)
+   This forces any standard BS navbar to adapt perfectly.
+===================================================== */
+.navbar, 
+.bg-dark, 
+.bg-body-tertiary, 
+[data-bs-theme="dark"] .bg-body-tertiary {
+    background: rgba(12, 12, 12, 0.88) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
     padding: 1rem 0;
 }
 
-.navbar-brand{
-    font-weight: 800;
+.navbar-brand {
+    font-weight: 800 !important;
     font-size: 1.25rem;
-    color: white !important;
+    color: #ffffff !important;
 }
 
-.nav-link{
-    color: rgba(255,255,255,.72);
+.nav-link {
+    color: rgba(255, 255, 255, 0.72) !important;
     font-weight: 500;
     position: relative;
 }
 
-.nav-link:hover{
-    color: white;
+.nav-link:hover {
+    color: #ffffff !important;
 }
 
-.nav-link.active{
-    color: var(--vk-primary);
+.nav-link.active {
+    color: var(--bs-primary) !important;
 }
 
-.nav-link.active::after{
+.nav-link.active::after {
     content: '';
     position: absolute;
     bottom: -6px;
     left: 0;
     width: 100%;
     height: 2px;
-    background: var(--vk-primary);
+    background: var(--bs-primary);
     border-radius: 50px;
 }
 
+/* =====================================================
+   COMPONENTS OVERWRITES (Buttons, Cards, Inputs)
+===================================================== */
 
-/* ===========================
-   HERO
-=========================== */
-.hero{
+/* Premium Gradient Primary Button */
+.btn-primary {
+    background: linear-gradient(90deg, var(--bs-primary), var(--bs-secondary)) !important;
+    border: none !important;
+    box-shadow: 0 0 20px rgba(255, 15, 123, 0.18) !important;
+    font-weight: 600;
+    padding: 0.8rem 1.3rem;
+    transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #ff2a8c, #ff6cb6) !important;
+    box-shadow: 0 0 30px rgba(255, 15, 123, 0.22) !important;
+    transform: translateY(-2px);
+}
+
+.btn:not(.btn-primary) {
+    font-weight: 600;
+    padding: 0.8rem 1.3rem;
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Native Forms Hijack */
+.form-control, .form-select {
+    background-color: #111111 !important;
+    border: 1px solid #2d2d2d !important;
+    color: #ffffff !important;
+    border-radius: 14px !important;
+    padding: 0.85rem 1rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--bs-primary) !important;
+    box-shadow: 0 0 0 0.18rem rgba(255, 15, 123, 0.20) !important;
+}
+
+/* Native Card Animations */
+.card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    transition: all 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 15, 123, 0.35) !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #111; }
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--bs-primary); }
+
+/* =====================================================
+   VALKYRIA CUSTOM APP LAYOUT BLOCKS
+===================================================== */
+.hero {
     min-height: 90vh;
     display: flex;
     align-items: center;
 }
 
-.hero-title{
+.hero-title {
     font-size: clamp(2.8rem, 6vw, 5rem);
     font-weight: 800;
     line-height: 1.1;
 }
 
-.hero-subtitle{
-    color: var(--vk-text-soft);
+.hero-subtitle {
+    color: #d4d4d8;
     font-size: 1.1rem;
     max-width: 600px;
 }
 
-
-/* ===========================
-   BUTTONS
-=========================== */
-.btn{
-    border-radius: var(--vk-radius-sm);
-    transition: var(--transition);
-    font-weight: 600;
-    padding: .8rem 1.3rem;
-}
-
-.btn:hover{
-    transform: translateY(-2px);
-}
-
-.btn-primary{
-    background: linear-gradient(
-        90deg,
-        var(--vk-primary),
-        var(--vk-secondary)
-    );
-
-    border: none;
-    box-shadow: var(--vk-shadow-pink);
-}
-
-.btn-primary:hover{
-    background: linear-gradient(
-        90deg,
-        #ff2a8c,
-        #ff6cb6
-    );
-
-    box-shadow:
-        0 0 30px rgba(var(--vk-primary-rgb), .22);
-}
-
-.btn-outline-light{
-    border: 1px solid rgba(255,255,255,.2);
-}
-
-.btn-outline-light:hover{
-    background: rgba(255,255,255,.08);
-}
-
-
-/* ===========================
-   CARDS
-=========================== */
-.card{
-    background: var(--vk-surface);
-    border: 1px solid var(--vk-border);
-    border-radius: var(--vk-radius);
-    color: var(--vk-text);
-    overflow: hidden;
-    transition: var(--transition);
-    box-shadow: var(--vk-shadow);
-}
-
-.card:hover{
-    transform: translateY(-4px);
-    border-color:
-        rgba(var(--vk-primary-rgb), .35);
-}
-
-.card-header{
-    background: transparent;
-    border-bottom: 1px solid var(--vk-border);
-}
-
-
-/* ===========================
-   STAT CARDS
-=========================== */
-.stat-card{
-    background: linear-gradient(
-        145deg,
-        #1a1a1a,
-        #111
-    );
-
-    border: 1px solid
-        rgba(255,255,255,.05);
-
+.stat-card {
+    background: linear-gradient(145deg, #1a1a1a, #111);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     padding: 1.5rem;
 }
 
-.stat-number{
+.stat-card .stat-number {
     font-size: 2rem;
     font-weight: 800;
-    color: var(--vk-primary);
+    color: var(--bs-primary);
 }
 
-.stat-label{
-    color: var(--vk-text-muted);
-}
-
-
-/* ===========================
-   FORMS
-=========================== */
-.form-label{
-    font-weight: 500;
-    color: var(--vk-text-soft);
-}
-
-.form-control,
-.form-select{
-    background: #111 !important;
-    border: 1px solid #2d2d2d;
-    color: white !important;
-    border-radius: 14px;
-    padding: .85rem 1rem;
-}
-
-.form-control::placeholder{
-    color: #666;
-}
-
-.form-control:focus,
-.form-select:focus{
-    background: #111 !important;
-    color: white !important;
-
-    border-color: var(--vk-primary);
-
-    box-shadow:
-        0 0 0 .18rem
-        rgba(var(--vk-primary-rgb), .20);
-}
-
-.form-control:disabled{
-    background: #191919;
-}
-
-
-/* ===========================
-   TABLES
-=========================== */
-.table{
-    color: white;
-}
-
-.table thead,
-.table tbody{
-    border-color: var(--vk-border);
-}
-
-.table-hover tbody tr:hover{
-    background:
-        rgba(255,255,255,.04);
-}
-
-
-/* ===========================
-   SIDEBAR
-=========================== */
-.sidebar{
+.sidebar {
     min-height: 100vh;
     background: #111;
-    border-right: 1px solid
-        var(--vk-border);
-
+    border-right: 1px solid var(--bs-border-color);
     padding: 1rem;
 }
 
-.sidebar-link{
+.sidebar-link {
     display: flex;
     align-items: center;
     gap: .75rem;
-
-    color: rgba(255,255,255,.75);
-
+    color: rgba(255, 255, 255, 0.75);
     padding: 14px;
     border-radius: 14px;
     margin-bottom: .5rem;
 }
 
-.sidebar-link:hover{
-    background:
-        rgba(255,255,255,.05);
-
-    color: white;
+.sidebar-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
 }
 
-.sidebar-link.active{
-    background:
-        rgba(var(--vk-primary-rgb), .15);
-
-    color: var(--vk-primary);
+.sidebar-link.active {
+    background: rgba(255, 15, 123, 0.15);
+    color: var(--bs-primary);
 }
 
-
-/* ===========================
-   CLASS SCHEDULE CARDS
-=========================== */
-.class-card{
+.class-card {
     border-radius: 18px;
     padding: 1rem;
-
     background: #171717;
-
-    border: 1px solid
-        var(--vk-border);
+    border: 1px solid var(--bs-border-color);
 }
 
-.class-time{
-    color: var(--vk-primary);
+.class-card .class-time {
+    color: var(--bs-primary);
     font-weight: 700;
     font-size: 1.2rem;
 }
 
-.badge-cupos{
-    background:
-        rgba(34,197,94,.15);
-
+.badge-cupos {
+    background: rgba(34, 197, 94, 0.15);
     color: #4ade80;
-
     padding: .35rem .8rem;
     border-radius: 100px;
 }
 
-.badge-full{
-    background:
-        rgba(239,68,68,.15);
-
+.badge-full {
+    background: rgba(239, 68, 68, 0.15);
     color: #f87171;
-
     padding: .35rem .8rem;
     border-radius: 100px;
 }
 
-
-/* ===========================
-   ALERTS
-=========================== */
-.alert{
-    border-radius: 18px;
-    border: none;
-}
-
-.alert-warning{
-    background:
-        rgba(245,158,11,.12);
-
-    color: #fcd34d;
-}
-
-.alert-success{
-    background:
-        rgba(34,197,94,.12);
-
-    color: #4ade80;
-}
-
-.alert-danger{
-    background:
-        rgba(239,68,68,.12);
-
-    color: #f87171;
-}
-
-
-/* ===========================
-   PROFILE
-=========================== */
-.profile-card{
+.profile-card {
     text-align: center;
     padding: 2rem;
 }
 
-.profile-avatar{
+.profile-card .profile-avatar {
     width: 90px;
     height: 90px;
     border-radius: 50%;
     object-fit: cover;
-
-    border: 3px solid
-        var(--vk-primary);
+    border: 3px solid var(--bs-primary);
 }
 
-
-/* ===========================
-   FOOTER
-=========================== */
-.footer{
-    border-top: 1px solid
-        rgba(255,255,255,.08);
-
+.footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding: 3rem 0;
     background: #090909;
-
-    color: var(--vk-text-muted);
+    color: #a1a1aa;
 }
 
-
-/* ===========================
-   UTILITIES
-=========================== */
-.bg-surface{
-    background: var(--vk-surface);
-}
-
-.text-pink{
-    color: var(--vk-primary);
-}
-
-.text-muted-custom{
-    color: var(--vk-text-muted);
-}
-
-.rounded-xl{
-    border-radius: 24px;
-}
-
-.shadow-pink{
-    box-shadow:
-        0 0 20px
-        rgba(var(--vk-primary-rgb), .20);
-}
-
-.glow:hover{
-    box-shadow:
-        0 0 30px
-        rgba(var(--vk-primary-rgb), .15);
-}
-
-.border-soft{
-    border: 1px solid
-        rgba(255,255,255,.06);
-}
-
-
-/* ===========================
-   MOBILE NAV
-=========================== */
-.mobile-nav{
+.mobile-nav {
     position: fixed;
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-
-    background:
-        rgba(10,10,10,.96);
-
+    bottom: 0; left: 0; width: 100%;
+    background: rgba(10, 10, 10, 0.96);
     backdrop-filter: blur(20px);
-
-    border-top: 1px solid
-        rgba(255,255,255,.06);
-
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
     padding: .75rem;
     z-index: 1000;
 }
 
-.mobile-nav a{
-    color: rgba(255,255,255,.7);
+.mobile-nav a {
+    color: rgba(255, 255, 255, 0.7);
     font-size: .85rem;
 }
 
-.mobile-nav a.active{
-    color: var(--vk-primary);
+.mobile-nav a.active { color: var(--bs-primary); }
+
+/* Custom Helper Utilities */
+.bg-surface { background: var(--bs-light); }
+.text-pink { color: var(--bs-primary); }
+.shadow-pink { box-shadow: 0 0 20px rgba(255, 15, 123, 0.20); }
+
+/* =====================================================
+   RESPONSIVE LAYOUT RESPONSES
+===================================================== */
+@media(max-width: 991px) {
+    .hero { min-height: auto; padding: 100px 0; text-align: center; }
+    .sidebar { display: none; }
 }
 
-
-/* ===========================
-   RESPONSIVE
-=========================== */
-@media(max-width: 991px){
-
-    .hero{
-        min-height: auto;
-        padding: 100px 0;
-        text-align: center;
-    }
-
-    .sidebar{
-        display: none;
-    }
-
+@media(max-width: 768px) {
+    .hero-title { font-size: 2.5rem; }
+    .card { border-radius: 16px; }
+    .btn { width: 100%; }
 }
-
-@media(max-width: 768px){
-
-    .hero-title{
-        font-size: 2.5rem;
-    }
-
-    .card{
-        border-radius: 16px;
-    }
-
-    .btn{
-        width: 100%;
-    }
-
-}
-
