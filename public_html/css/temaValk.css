@@ -301,6 +301,158 @@ a {
 .text-pink { color: var(--bs-primary); }
 .shadow-pink { box-shadow: 0 0 20px rgba(255, 15, 123, 0.20); }
 
+/* Premium Gradient Outline Button */
+.btn-outline-primary {
+    background: transparent !important;
+    border: 2px solid var(--bs-primary) !important;
+    color: var(--bs-primary) !important;
+    font-weight: 600;
+    padding: 0.8rem 1.3rem;
+    transition: all 0.25s ease;
+}
+
+.btn-outline-primary:hover {
+    background: linear-gradient(90deg, var(--bs-primary), var(--bs-secondary)) !important;
+    border-color: transparent !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 25px rgba(255, 15, 123, 0.25) !important;
+}
+
+/* Optional: Subtle focus state to match your form fields */
+.btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.18rem rgba(255, 15, 123, 0.25) !important;
+}
+
+.custom-pagination {
+    gap: 10px;
+}
+
+.custom-pagination .page-link {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    border: 1px solid #ff1493;
+    background-color: #0d0d0d;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s ease;
+}
+
+.custom-pagination .page-link:hover {
+    background-color: rgba(255, 20, 147, 0.15);
+}
+
+.custom-pagination .page-item.active .page-link {
+    background-color: #ff1493;
+    border-color: #ff1493;
+    color: white;
+}
+
+/* Remove Bootstrap tab border */
+.nav-tabs {
+    border-bottom: none !important;
+}
+
+/* Default tab */
+.nav-tabs .nav-link {
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: white;
+    position: relative;
+}
+
+/* Remove Bootstrap active border completely */
+.nav-tabs .nav-link.active {
+    background: transparent !important;
+    color: #ff1493 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Create your own clean underline */
+.nav-tabs .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: #ff1493;
+}
+.avatar-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid #ff1493;
+}
+/* Inputs */
+.custom-input {
+    background-color: #0b0b0b !important;
+    border: 1px solid #2a2a2a !important;
+    border-radius: 14px !important;
+    color: white !important;
+    padding: 14px !important;
+}
+
+/* Placeholder */
+.custom-input::placeholder {
+    color: #6c757d;
+}
+
+/* Focus */
+.custom-input:focus {
+    background-color: #0b0b0b !important;
+    border-color: #ff1493 !important;
+    box-shadow: none !important;
+    color: white !important;
+}
+
+/* Select text color */
+.form-select {
+    color: #6c757d !important;
+}
+
+/* Navbar cleanup */
+.navbar {
+    border-bottom: none !important;
+}
+
+.schedule-card {
+    background-color: #0a0a0a;
+    border: 1px solid #151515;
+    border-radius: 14px;
+    padding: 16px;
+    transition: 0.2s ease;
+}
+
+.schedule-card:hover {
+    border-color: #ff1493;
+}
+
+.schedule-card p {
+    margin: 0;
+}
+
+/* Make calendar/time picker icons white */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+/* Optional: white select arrow */
+.form-select {
+    background-color: #0b0b0b !important;
+    color: white !important;
+
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3e%3cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592c.86 0 1.32 1.013.753 1.658L8.753 11.14a1 1 0 0 1-1.506 0z'/%3e%3c/svg%3e") !important;
+}
+
 /* =====================================================
    RESPONSIVE LAYOUT RESPONSES
 ===================================================== */
