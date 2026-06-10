@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/temaValk.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid my-2">
+
+        <ul class="nav nav-tabs justify-content-center" id="tabs-admin" role="tablist">
+            <li class="nav-item me-5 mb-1" role="presentation">
+                <a class="nav-link" href="#"> <img
+                        src="../static/arrow_back_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="atras">
+            </li></a>
+
+            <li class="nav-item mx-4" role="presentation">
+                <button class="nav-link active" id="alumnas-tab" data-bs-toggle="tab" data-bs-target="#alumnas-tab-pane"
+                    type="button" role="tab" aria-controls="alumnas-tab-pane" aria-selected="true">Alumnas</button>
+            </li>
+            <li class="nav-item mx-4" role="presentation">
+                <button class="nav-link" id="profesores-tab" data-bs-toggle="tab" data-bs-target="#profesores-tab-pane"
+                    type="button" role="tab" aria-controls="profesores-tab-pane"
+                    aria-selected="true">Profesores</button>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="alumnas-tab-pane" role="tabpanel" aria-labelledby="alumnas-tab"
+                tabindex="1">
+                <div class="row mt-3">
+                    <div class="col">
+                        <form class="d-flex" role="search">
+                            <div class="row align-items-center px-5">
+                                <div class="col-auto">
+                                    <img src="../static/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                                </div>
+                                <div class="col-auto">
+                                    <input class="form-control w-100" type="search" placeholder="Buscar Alumna"
+                                        aria-label="Search" />
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn btn-primary w-100" type="submit">Buscar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="table-responsive">
+                        <table class="table align-middle">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-auto">
+                                                        <div class="row">
+                                                            <p class="text-white">Almendra Gonzalez</p>
+                                                        </div>
+                                                        <div class="row">
+                                                            <p class="text-white">Rut 10.456.654-7</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="row">
+                                                            <a href="#">
+                                                                <img src="../static/arrow_forward_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                        
+                                                </div>
+                        
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <!-- Circular avatar image option -->
+                                        <img src="https://placeholder.com" class="rounded-circle"
+                                            style="width: 50px; height: 50px; object-fit: cover;" alt="User Avatar">
+                                    </td>
+                                    <td>Ergonomic Office Chair</td>
+                                    <td><span class="badge bg-warning">Low Stock</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div class="tab-pane fade" id="profesores-tab-pane" role="tabpanel" aria-labelledby="´profesores-tab"
+                tabindex="2">...
+            </div>
+        </div>
+
+    </main>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
