@@ -390,6 +390,12 @@ a {
     object-fit: cover;
     border: 2px solid #ff1493;
 }
+.avatar-img-exp {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 2px solid #ff1493;
+}
 /* Inputs */
 .custom-input {
     background-color: #0b0b0b !important;
@@ -428,6 +434,21 @@ a {
     border-radius: 14px;
     padding: 16px;
     transition: 0.2s ease;
+}
+
+.plan-card {
+    background-color: #0a0a0a;
+    border: 1px solid #ff1493;
+    border-radius: 14px;
+    padding: 16px;
+    transition: 0.2s ease;
+}
+.plan-card:hover {
+    border-color: #ff1493;
+}
+
+.plan-card p {
+    margin: 0;
 }
 
 .schedule-card:hover {
