@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/temaValk.css" rel="stylesheet" type="text/css"/>
+        <title>Nueva Rutina</title>
+    </head>
+    <body class="">
+        <main class="container mt-4">
+            <div class="mb-4">
+                <a class="navbar-brand ms-2" href="panelProfesor.html"><img
+                        src="../static/arrow_back_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                </a>
+            </div>
+            <div class="row text-center mb-4 mx-0">
+                <a href="rutinas.html" class="col-6 pb-2 text-decoration-none" style="border-bottom: 2px solid #333;">
+                    <span class="text-white-50">Mis rutinas</span>
+                </a>
+                <a href="#" class="col-6 pb-2 text-decoration-none" style="border-bottom: 2px solid #e91e63;">
+                    <span class="text-white fw-bold">Nueva rutina</span>
+                </a>
+            </div>
+            <div class="card bg-dark text-white rounded-4 mt-2">
+                <div class="card-body px-4 py-4">
+                    <form>
+                        <div class="mb-4">
+                            <label class="form-label text-white-50 small fw-bold">FECHA DE LA RUTINA</label>
+                            <input type="date" class="form-control bg-transparent text-white border-secondary" style="color-scheme: dark;">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label text-white-50 small fw-bold">DESCRIPCIÓN / ENFOQUE</label>
+                            <textarea class="form-control bg-transparent text-white border-secondary" rows="3" placeholder="Ej: Tren inferior y cardio HIIT..."></textarea>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label text-white-50 small fw-bold">LISTA DE EJERCICIOS</label>
+                            <textarea class="form-control bg-transparent text-white border-secondary" rows="5" placeholder="1. Sentadillas (4x12)&#10;2. Flexiones (4x10)&#10;3. Burpees (3x15)"></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center mt-5 mb-4">
+                <button class="btn text-white w-100 fw-bold py-3 rounded-3" style="background-color: #e91e63;">
+                    GUARDAR RUTINA
+                </button>
+            </div>
+        </main>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

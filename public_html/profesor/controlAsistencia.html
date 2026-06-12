@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="UTF-8">
@@ -9,106 +8,73 @@
         <title>Control de asistencia</title>
     </head>
     <body class="">
-        <nav class="navbar navbar-expand-lg bg-dark bg-body-tertiary" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand ms-2" href="#"><img
-                    src="../static/arrow_back_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="clases.html">Clases</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="controlAsistencia.html">Asistencia</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Rutinas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Cerrar Sesión</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
         <main class="container mt-4">
-            <div class="card bg-dark text-white">
+            <a class="navbar-brand ms-2" href="panelProfesor.html"><img
+                    src="../static/arrow_back_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="">
+            </a>
+            <div class="card bg-dark text-white mt-3">
                 <div class="card-body">
-
                     <div class="row mb-4">
                         <div class="col-8">
                             <h4 class="fw-bold">Funcional - 18:00</h4>
                         </div>
                         <div class="col-4 text-end">
-                            <h4 class="fw-bold">12/15</h4>
+                            <h4 class="fw-bold text-white-50">12/15</h4>
                         </div>
                     </div>
-
                     <div class="row align-items-center mb-3">
-                        <div class="col-10">
+                        <div class="col-10 d-flex align-items-center">
+                            <img src="../static/icon_alumnas.png" alt="icono" class="me-3" width="22">
                             <h5 class="mb-0">Maria Gonzalez</h5>
                         </div>
                         <div class="col-2 text-end">
-                            <input class="form-check-input" type="checkbox">
+                            <input class="form-check-input" type="checkbox" checked>
                         </div>
                     </div>
-
                     <div class="row align-items-center mb-3">
-                        <div class="col-10">
+                        <div class="col-10 d-flex align-items-center">
+                            <img src="../static/icon_alumnas.png" alt="icono" class="me-3" width="22">
                             <h5 class="mb-0">Carla Rojas</h5>
                         </div>
                         <div class="col-2 text-end">
                             <input class="form-check-input" type="checkbox">
                         </div>
                     </div>
-
                     <div class="row align-items-center mb-3">
-                        <div class="col-10">
+                        <div class="col-10 d-flex align-items-center">
+                            <img src="../static/icon_alumnas.png" alt="icono" class="me-3" width="22">
                             <h5 class="mb-0">Valentina Pérez</h5>
                         </div>
                         <div class="col-2 text-end">
-                            <input class="form-check-input" type="checkbox">
+                            <input class="form-check-input" type="checkbox" checked>
                         </div>
                     </div>
-
                     <div class="row align-items-center mb-3">
-                        <div class="col-10">
+                        <div class="col-10 d-flex align-items-center">
+                            <img src="../static/icon_alumnas.png" alt="icono" class="me-3" width="22">
                             <h5 class="mb-0">Catalina Soto</h5>
                         </div>
                         <div class="col-2 text-end">
-                            <input class="form-check-input" type="checkbox">
+                            <input class="form-check-input" type="checkbox" checked>
                         </div>
                     </div>
-
                     <div class="row align-items-center">
-                        <div class="col-10">
+                        <div class="col-10 d-flex align-items-center">
+                            <img src="../static/icon_alumnas.png" alt="icono" class="me-3" width="22">
                             <h5 class="mb-0">Camila Vega</h5>
                         </div>
                         <div class="col-2 text-end">
-                            <input class="form-check-input" type="checkbox">
+                            <input class="form-check-input" type="checkbox" checked>
                         </div>
                     </div>
-
                 </div>
             </div>
-
-            <div class="text-center mt-4">
-                <button class="btn btn-primary">
+            <div class="text-center mt-4 mb-4">
+                <button class="btn text-white w-100 fw-bold py-2 rounded-3" style="background-color: #e91e63;">
                     GUARDAR ASISTENCIA
                 </button>
             </div>
-
         </main>
-
         <script src="../js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
