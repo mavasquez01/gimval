@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         } else if (rut === "123456-7" && pass === "12345") {
             rol = "Profesor";
-            pagina = "../profesor/panelProfesor.html";
+            pagina = "../profesor/panelProfesor_integrado.html";
         }
 
         if (rol !== "" && pagina !== "") {
