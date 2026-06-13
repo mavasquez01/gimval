@@ -22,93 +22,98 @@
         </nav>
 
         <main class="mobile-wrapper mt-3 pb-5">
-
             <div class="text-center mb-4">
                 <h4 class="text-white mb-0">Crear Rutina</h4>
-                <p class="text-pink fw-semibold mb-0">12 Mayo • 18:00 hrs</p>
+                <p class="text-pink fw-semibold mb-0">Añade los ejercicios que realizará la alumna</p>
             </div>
-
-            <div class="card bg-dark text-white mb-4 border border-secondary">
-                <div class="card-body p-3">
-                    <div class="mb-3">
-                        <label class="form-label text-secondary small fw-bold mb-1">NOMBRE DE LA RUTINA</label>
-                        <input type="text" class="form-control bg-transparent text-white border-secondary" placeholder="Ej: Rutina fuerza piernas...">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label text-secondary small fw-bold mb-1">FECHA DE LA RUTINA</label>
-                        <input type="date" class="form-control bg-transparent text-white border-secondary">
-                    </div>
-                    <div class="mb-0">
-                        <label class="form-label text-secondary small fw-bold mb-1">PROFESORA ASIGNADA</label>
-                        <select class="form-select bg-transparent text-white border-secondary">
-                            <option selected disabled>Seleccione una profesora</option>
-                            <option value="camila">Camila</option>
-                            <option value="vale">Vale</option>
-                            <option value="daniela">Daniela</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
             <div class="d-flex justify-content-between align-items-center mb-3 px-1">
                 <p class="text-white mb-0 fw-bold fs-5">Ejercicios</p>
             </div>
-
             <div id="contenedorEjercicios">
-                <div class="card bg-dark text-white mb-3 border border-secondary shadow-sm tarjeta-ejercicio">
-                    <div class="card-body p-3 position-relative">
-                        <button type="button" class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 border-0">
-                            <i class="bi bi-trash fs-5"></i>
-                        </button>
-                        <div class="mb-3 mt-1 pe-4">
-                            <label class="form-label text-secondary small mb-1">Nombre del ejercicio</label>
-                            <input type="text" class="form-control bg-dark text-white border-secondary fw-semibold" placeholder="Ej: Sentadilla con barra" value="Sentadilla">
+                <div class="card schedule-card text-white mb-3 tarjeta-ejercicio">
+                    <div class="card-body p-3">
+
+                        <div class="d-flex justify-content-end mb-1">
+                            <button type="button" class="btn btn-sm text-danger btn-eliminar p-0">
+                                <i class="bi bi-trash fs-5"></i>
+                            </button>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-white small mb-1">
+                                Nombre del ejercicio
+                            </label>
+                            <input type="text"
+                                   class="form-control custom-input text-white fw-semibold"
+                                   placeholder="Ej: Sentadilla con barra">
                         </div>
                         <div class="row g-2">
                             <div class="col-6">
-                                <label class="form-label text-secondary small mb-1">Series x Reps</label>
-                                <input type="text" class="form-control bg-dark text-white border-secondary text-center" placeholder="Ej: 4 x 12" value="4 x 12">
+                                <label class="form-label text-white small mb-1">
+                                    Series x Reps
+                                </label>
+                                <input type="text"
+                                       class="form-control custom-input text-center"
+                                       placeholder="Ej: 4 x 12">
                             </div>
+
                             <div class="col-6">
-                                <label class="form-label text-secondary small mb-1">Peso Sugerido (kg)</label>
-                                <input type="number" class="form-control bg-dark text-white border-secondary text-center" placeholder="Ej: 60" value="60">
+                                <label class="form-label text-white small mb-1">
+                                    Peso Sugerido (kg)
+                                </label>
+                                <input type="number"
+                                       class="form-control custom-input text-center"
+                                       placeholder="Ej: 60">
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="card schedule-card text-white mb-3 tarjeta-ejercicio">
+                    <div class="card-body p-3">
 
-                <div class="card bg-dark text-white mb-3 border border-secondary shadow-sm tarjeta-ejercicio">
-                    <div class="card-body p-3 position-relative">
-                        <button type="button" class="btn btn-sm btn-outline-danger position-absolute top-0 end-0 m-2 border-0">
-                            <i class="bi bi-trash fs-5"></i>
-                        </button>
-                        <div class="mb-3 mt-1 pe-4">
-                            <label class="form-label text-secondary small mb-1">Nombre del ejercicio</label>
-                            <input type="text" class="form-control bg-dark text-white border-secondary fw-semibold" placeholder="Ej: Peso Muerto" value="Peso Muerto">
+                        <div class="d-flex justify-content-end mb-1">
+                            <button type="button" class="btn btn-sm text-danger btn-eliminar p-0">
+                                <i class="bi bi-trash fs-5"></i>
+                            </button>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-white small mb-1">
+                                Nombre del ejercicio
+                            </label>
+                            <input type="text"
+                                   class="form-control custom-input text-white fw-semibold"
+                                   placeholder="Ej: Peso Muerto">
                         </div>
                         <div class="row g-2">
                             <div class="col-6">
-                                <label class="form-label text-secondary small mb-1">Series x Reps</label>
-                                <input type="text" class="form-control bg-dark text-white border-secondary text-center" placeholder="Ej: 4 x 10" value="4 x 10">
+                                <label class="form-label text-white small mb-1">
+                                    Series x Reps
+                                </label>
+                                <input type="text"
+                                       class="form-control custom-input text-center"
+                                       placeholder="Ej: 4 x 10">
                             </div>
                             <div class="col-6">
-                                <label class="form-label text-secondary small mb-1">Peso Sugerido (kg)</label>
-                                <input type="number" class="form-control bg-dark text-white border-secondary text-center" placeholder="Ej: 70" value="70">
+                                <label class="form-label text-white small mb-1">
+                                    Peso Sugerido (kg)
+                                </label>
+                                <input type="number"
+                                       class="form-control custom-input text-center"
+                                       placeholder="Ej: 70">
                             </div>
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
 
-            <button type="button" class="btn btn-outline-pink w-100 py-2 border-dashed mb-4 rounded-3">
-                <i class="bi bi-plus-circle me-2"></i> Añadir otro ejercicio
+            <button type="button"
+                    class="btn btn-outline-pink w-100 py-2 border-dashed mb-4 rounded-3">
+                <i class="bi bi-plus-circle me-2"></i>
+                Añadir otro ejercicio
             </button>
 
-            <div class="text-center mt-2 mb-4">
-                <a href="rutina.html" class="btn text-white w-100 fw-bold py-3 rounded-pill shadow" style="background-color: #e91e63;">
-                    GUARDAR RUTINA
-                </a>
-            </div>
+            <button type="submit" class="btn btn-primary w-100 mb-3">
+                GUARDAR RUTINA
+            </button>
 
         </main>
 
