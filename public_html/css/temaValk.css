@@ -702,6 +702,89 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     max-width: 380px !important;
     margin: 1.75rem auto !important;
 }
+
+.alumnas-list{
+    border: 1px solid #ff0f7b;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background: #0d0d0d;
+}
+
+.alumnas-list .list-group-item{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.alumnas-list .list-group-item:last-child{
+    border-bottom: none;
+}
+
+.form-switch .form-check-input:not(:checked) {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: #ff0f7b;
+    border-color: #ff0f7b;
+}
+
+.sticky-save {
+    position: sticky;
+    bottom: 90px;
+    z-index: 100;
+}
+
+/* Landing animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(45px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-45px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(45px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal-left.active,
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.delay-1 { transition-delay: .15s; }
+.delay-2 { transition-delay: .3s; }
+.delay-3 { transition-delay: .45s; }
+
+.hero-text-animate {
+    animation: heroFadeUp .9s ease forwards;
+}
+
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* =====================================================
    RESPONSIVE LAYOUT RESPONSES
 ===================================================== */
